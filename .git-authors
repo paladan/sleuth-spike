@@ -1,0 +1,32 @@
+authors:
+  lk: Leonhardt Koepsell
+  lm: Liam Morley
+  kn: Kapil Nikhra
+  bt: Bruce Thelen
+  em: Ehren Murdick
+  gl: Genevieve LEsperance
+  tc: Tiffany Chang
+  wb: Walker Berry
+  dn: Dan Neumann
+  bl: Bryan Logan
+  mo: Michael Oleske
+  vt: Vinh Thai
+email_addresses:
+  lk: lkoepsell@pivotal.io
+  lm: lmorley@pivotal.io
+  kn: knikhra@corelogic.com
+  bt: bthelen@corelogic.com
+  em: emurdick@pivotal.io
+  gl: glesperance@pivotal.io
+  tc: tchang@corelogic.com
+  wb: wberry@corelogic.com
+  dn: dneumann@pivotal.io
+  bl: blogan@corelogic.com
+  mo: moleske@pivotal.io
+  vt: vithai@corelogic.com
+sshkey_paths:
+  tc: /Volumes/tchang/.ssh/id_rsa
+  lk: /Volumes/roze/.ssh/roze
+  dn: /Volumes/Serenity/.ssh/id_rsa
+  vt: /Users/pivotal/.ssh/id_rsa_vinh
+  gl: /Users/pivotal/.ssh/gen
