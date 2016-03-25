@@ -4,7 +4,7 @@ In order to reproduce the conflict:
 
 1) Build the jar with `gradle build`
 
-2) Execute the jar with `java -jar sleuth-jms-spike/build/libs/sleuth-spike-1.0-SNAPSHOT.jar`
+2) Execute the jar with `java -jar sleuth-jms-spike/build/libs/sleuth-spike-1.0.0-SNAPSHOT.jar`
 
 3) You should see a stacktrace showing a `BeanCreationException: Error creating bean with name 'oracleAdvancedQueueListener'` with a root cause of: 
 
