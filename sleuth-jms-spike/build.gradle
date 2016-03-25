@@ -1,13 +1,19 @@
-apply plugin: "io.spring.dependency-management"
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'io.spring.dependency-management'
 
-buildscript {
-    repositories {
-        jcenter()
-    }
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-    dependencies {
-        classpath "io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE"
-    }
+repositories {
+    flatDir { dirs 'lib' }
+    jcenter()
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = 2.8
 }
 
 dependencyManagement {
@@ -22,5 +28,6 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-sleuth')
     compile('org.springframework:spring-jms')
     compile('com.oracle:ojdbc6:11.2.0.3.0')
+    compile('com.oracle:jmscommon:11.2.0.1.0')
     compile('com.oracle:aqapi:11.2.0.1.0')
 }

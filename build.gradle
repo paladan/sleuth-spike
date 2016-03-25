@@ -1,39 +1,19 @@
 group 'sleuth-spike'
 
-apply plugin: 'java'
-apply plugin: 'idea'
-
 buildscript {
     ext {
         springBootVersion = '1.3.2.RELEASE'
+        dependencyManagementPluginVersion = '0.5.3.RELEASE'
     }
 
     repositories {
         mavenCentral()
+        maven { url 'https://repo.spring.io/plugins-release' }
         maven { url "https://repo.spring.io/milestone" }
     }
 
     dependencies {
         classpath ("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
-
-configure(subprojects) {
-    apply plugin: 'spring-boot'
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-}
-
-subprojects {
-    repositories {
-        maven { url 'https://repo.corelogic.net/nexus/content/groups/m2/' }
-    }
-}
-
-allprojects {
-    group = 'com.example'
-
-    task wrapper(type: Wrapper) {
-        gradleVersion = 2.8
+        classpath("io.spring.gradle:dependency-management-plugin:${dependencyManagementPluginVersion}")
     }
 }
